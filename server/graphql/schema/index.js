@@ -10,10 +10,12 @@ type User {
     lastName: String
     createdAt: String!
     updatedAt: String!
+    friends: [User!]!
 }
 
 type RootQuery {
     users: [User!]!
+    friends: [User!]!
 }
 
 input UserInput {
@@ -26,6 +28,7 @@ input UserInput {
 
 type RootMutation {
     createUser(userInput: UserInput): User
+    addUserToFriendList(userId: ID!): User
 }
 
 schema {
