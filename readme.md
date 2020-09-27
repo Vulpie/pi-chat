@@ -18,3 +18,17 @@
 	}
 }
 ```
+
+---
+
+## User
+
+#### User Queries
+
+-   users - _get list of all users_
+-   friends - _get list of your firends_
+
+#### User Mutations
+
+-   createUser
+-   addUserToFriendList

@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 const User = require('../../models/User')
 const userParser = require('./helpers/merge')
 
-const CURRENT_USER_ID = '5f70aabb2cbddb3a8442e8db'
+const CURRENT_USER_ID = '5f70aa7b2cbddb3a8442e8da'
 
 module.exports = {
 	users: async () => {
