@@ -1,6 +1,14 @@
 const { buildSchema } = require('graphql')
 
 module.exports = buildSchema(`
+type Team {
+    _id: ID!
+    name: String!
+    description: String
+    leader: User!
+    members: [User!]!
+}
+
 type User {
     _id: ID!
     email: String!
@@ -11,11 +19,7 @@ type User {
     createdAt: String!
     updatedAt: String!
     friends: [User!]!
-}
-
-type RootQuery {
-    users: [User!]!
-    friends: [User!]!
+    teams: [Team!]!
 }
 
 input UserInput {
@@ -26,9 +30,21 @@ input UserInput {
     lastName: String
 }
 
+input TeamInput {
+    name: String!
+    description: String
+}
+
+type RootQuery {
+    users: [User!]!
+    friends: [User!]!
+    teams: [Team!]!
+}
+
 type RootMutation {
     createUser(userInput: UserInput): User
     addUserToFriendList(userId: ID!): User
+    createTeam(teamInput: TeamInput): Team
 }
 
 schema {

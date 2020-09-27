@@ -28,6 +28,12 @@ const userSchema = new Schema(
 				ref: 'User',
 			},
 		],
+		teams: [
+			{
+				type: Schema.Types.ObjectId,
+				ref: 'Team',
+			},
+		],
 	},
 	{ timestamps: true }
 )
