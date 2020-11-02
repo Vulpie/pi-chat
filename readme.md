@@ -1,4 +1,9 @@
-# Chat Application with time manager
+# Chat Application with task manager
+
+___Work in progress___
+
+Web application for teams. Create organization, add team members, communicate with your team, manage tasks and projects for each member of your team.
+
 
 ## Technology
 
